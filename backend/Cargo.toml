@@ -1,0 +1,22 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+lettre = "0.10"
+rand = "0.8.5"
+bcrypt = "0.14.0"
+
+[dependencies.rocket]
+version = "=0.5.0-rc.3"
+features = ["json"]
+
+[dependencies.mongodb]
+version = "2.5.0"
+features = ["tokio-sync"]
+
+[dependencies.rocket_db_pools]
+version = "=0.1.0-rc.3"
+features = ["mongodb"]
