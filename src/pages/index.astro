@@ -1,0 +1,9 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/layout.astro';
+const { name } = { name: 'hi' };
+---
+
+<Layout title='Home'>
+    <h1 class='text-centre-horizontal text-default-spacing-vertical'>Welcome back, {name}!</h1>
+</Layout>

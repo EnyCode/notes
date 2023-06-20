@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--colour-bg);
+    color: var(--colour-font);
+}
+
+:root {
+    --colour-bg: #383838;
+    --colour-bg-light: #505050;
+    --colour-bg-dark: #333333;
+
+    --font: Verdana, Geneva;
+    --colour-font: #d3d3d3;
+    --colour-font-important: #e9e9e9;
+}
+
+button {
+    appearance: none;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.navBar {
+    background-color: var(--colour-bg-light);
+    width: 100px;
+    height: 100%;
+    position: fixed;
+}
+
+.text-centre-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.text-default-spacing-vertical {
+    padding-top: 60px;
+}
