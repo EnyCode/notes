@@ -1,9 +1,37 @@
 ---
 import '../styles/global.css';
+
 import Layout from '../layouts/layout.astro';
-const { name } = { name: 'hi' };
+import Note from '../components/note.astro';
+const loggedIn = true;
+
+const notes = [
+    {
+        title: `this is a new note`,
+        content: `this is the content of a new note`,
+        date: new Date(2023, 10, 29),
+    },
+    {
+        title: `birthday`,
+        content: `my birthday today`,
+        date: new Date(2023, 4, 29),
+    },
+];
+
+const user = { username: 'bob', email: 'bob@gmail.com' };
+const { username, email } = user;
 ---
 
 <Layout title='Home'>
-    <h1 class='text-centre-horizontal text-default-spacing-vertical'>Welcome back, {name}!</h1>
+    <h1 class='text-centre-horizontal text-default-spacing-vertical'>
+        Welcome back, {username}!
+    </h1><br />
+
+    <div class='notes-container'>
+        <div class='recent-note-container'>
+            {notes.map(note => <Note title={note.title} content={note.content ? note.content : ''} date={note.date} />)}
+        </div>
+    </div>
 </Layout>
+
+<script></script>

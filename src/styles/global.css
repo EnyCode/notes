@@ -17,6 +17,8 @@ body {
     --font: Verdana, Geneva;
     --colour-font: #d3d3d3;
     --colour-font-important: #e9e9e9;
+
+    --navBarWidth: 200px;
 }
 
 button {
@@ -29,9 +31,13 @@ h1 {
 
 .navBar {
     background-color: var(--colour-bg-light);
-    width: 100px;
-    height: 100%;
+    width: var(--navBarWidth);
+    height: 100dvh;
     position: fixed;
+}
+
+.container {
+    margin-left: var(--navBarWidth);
 }
 
 .text-centre-horizontal {
@@ -41,4 +47,16 @@ h1 {
 
 .text-default-spacing-vertical {
     padding-top: 60px;
+}
+
+.notes-container {
+    width: 100%;
+    height: 80%;
+}
+
+.recent-note-container {
+    background-color: var(--colour-bg-light);
+    border-radius: 12px;
+    margin: 30px 15px;
+    padding: 10px;
 }

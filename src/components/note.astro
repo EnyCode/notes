@@ -1,0 +1,37 @@
+---
+export interface Props {
+    title: string;
+    content?: string;
+    date: Date;
+}
+
+const { title, content } = Astro.props as Props;
+let date = new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'short' }).format(Astro.props.date);
+---
+
+<div class='note'>
+    <div class='note-title'>{title}</div>
+    <div class='note-content'>{content}</div>
+    <div class='note-date'>{date}</div>
+</div>
+
+<style>
+    .note {
+        background-color: var(--colour-bg);
+        margin: 15px 10px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+    .note-title {
+        padding: 10px 0;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .note-content {
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+    .note-date {
+        font-size: 13px;
+    }
+</style>
